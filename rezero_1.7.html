@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://sun9-80.userapi.com/s/v1/if1/lMmk7hcllCHGVtrz1Xp1p2s2fPHmtQd1i9WQ2YvHK-GO6UzaQrUj_mLz4WTUAlGHsSsM1g.jpg?quality=96&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&u=ldzIouW6Z0Y64I7zbJTbi_2n2mOxH4jXXbwcZptOs8M&cs=604x340" alt="header logo" draggable="false">
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="animen home">ГЛАВНАЯ</a></li>
+            <li><a href="anime.html" class="animen anime">АНИМЕ</a></li>
+            <li><a href="schedule.html" class="animen schedule">РАСПИСАНИЕ</a></li>
+            <li><a href="favourites.html" class="animen favourites">ИЗБРАННОЕ</a></li>
+            <li><a href="profile.html" class="animen profile">ПРОФИЛЬ</a></li>
+            <li><a href="settings.html" class="animen settings">НАСТРОЙКИ</a></li>
+            <li><a href="support.html" class="animen support">ПОДДЕРЖКА</a></li>
+        </ul>
+    </nav>
+
+    <video id="my-player_html5_api" class="vjs-tech" preload="none" controls>
+        <source id="video-1080p" src="https://rutube.ru/video/f240342e83a294c9615b5a00f2cea946/?r=plemwd" type="video/mp4" lang="ru" label="1080p" res="1080">
+        <source id="video-720p" src="https://r812115.yandexwebcache.org/one-punch-man/4.720.b73e7b645db871b0.mp4?hash1=9b6d9aaa2cb4bbf315c69741c4fcaeb9&amp;hash2=822ffaf35de878c94af3a945dc3baaee" type="video/mp4" lang="ru" label="720p" res="720">
+        <source id="video-480p" src="https://r812115.yandexwebcache.org/one-punch-man/4.480.d3b50cd1546e9aef.mp4?hash1=b533e0ec8391ff30814493783e95b68d&amp;hash2=89e0be31bda02a2435236a392b64c7ae" type="video/mp4" lang="ru" label="480p" res="480" selected="true">
+        <source id="video-360p" src="https://r812115.yandexwebcache.org/one-punch-man/4.360.db3915b92fdac229.mp4?hash1=c45f411a98fe7fa2edd57f5dd28d2666&amp;hash2=eb7fcea84ccf388929e83647e57a4abc" type="video/mp4" lang="ru" label="360p" res="360">
+    </video> 
+
+    <div class="quality-controls">
+        <label for="video-quality">Выберите качество видео:</label>
+        <select id="video-quality">
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+            <option value="360">360p</option>
+        </select>
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+}
+nav {
+    background-color:#f0f0f0;
+    padding: 0px 0px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.animen {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    padding: 16px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    }
+    .home{
+    background-color:#71d2ff ;
+    }
+
+    .anime {
+        background-color: #53c8ff; 
+    }
+    
+    .schedule {
+        background-color: #29b6f6;
+    }
+    
+    .favourites {
+        background-color: #039be5; 
+    }
+    
+    .profile {
+        background-color: #0288d1; 
+    }
+    
+    .settings{
+        background-color: #047bbb;
+    } 
+
+    .support{
+        background-color: #01659b;
+    }
+    .animen:hover {
+        background-color: rgba(130, 211, 255, 0.884)
+    }
+
+    
+    
+    .search-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh; /* Устанавливаем на весь экран */
+        padding: 0 20px; /* Отступы по бокам, чтобы избежать попадания элементов в край */
+    }
+    
+    .search {
+        border: 1px solid #ccc;
+        padding: 15px 30px;
+        font-size: 18px;
+        width: 100%;  /* Ширина поля 100% */
+        max-width: 700px;  /* Ограничиваем максимальную ширину */
+        border-radius: 5px;
+        outline: none;
+        transition: all 0.3s ease;
+        box-sizing: border-box; /* Для учета padding внутри ширины */
+    }
+    
+    .search:focus {
+        border-color: #71d2ff;
+    }
+    
+    .search-button {
+        background-color: #71d2ff;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+        height: 100%; /* Кнопка будет по высоте экрана */
+    }
+    
+    .search-button:hover {
+        background-color: #53c8ff;
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .menu {
+            flex-direction: column;
+        }
+    
+        .animen {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+    
+        .search {
+            width: 60%;  /* Поле будет занимать 80% ширины экрана на мобильных устройствах */
+            font-size: 16px;
+        }
+    
+        .search-button {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+    }
+/* Общие стили для страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Контейнер для аниме-колонок (горизонтальная прокрутка) */
+.anime-row {
+    display: flex;         /* Используем flexbox для горизонтального расположения */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    flex-wrap: wrap;       /* Позволяет элементам переноситься на новую строку при необходимости */
+    gap: 10px;             /* Уменьшаем отступы между колонками */
+}
+
+/* Стиль для блока с аниме */
+.anime-column {
+    width: 180px;          /* Уменьшаем ширину */
+    max-width: 230px;      /* Ограничиваем максимальную ширину */
+    padding: 10px 6px;
+    text-align: center;
+    position: relative;
+    flex-grow: 1; /* Устанавливает, что колонки могут расти, чтобы занимать доступное пространство */
+    margin-bottom: 20px;   /* Добавляем отступ снизу для лучшего расположения */
+}
+
+/* Изображение внутри блока */
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Плавное изменение масштаба */
+}
+
+/* Эффект увеличения изображения при наведении на ссылку (на изображение) */
+.image-block:hover img {
+    transform: scale(1.05); /* Увеличиваем изображение на 5% */
+}
+
+/* Стили для ссылки на аниме */
+a {
+    text-decoration: none;
+    color: inherit; /* Убираем стандартный стиль для ссылок */
+}
+
+/* Эффекты для изображения при наведении (границы) */
+.image-block:hover::before,
+.image-block:hover::after {
+    opacity: 1;
+}
+
+.image-block::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid var(--border-third);
+    border-left: 2px solid var(--border-third);
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.image-block::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    border-bottom: 2px solid var(--border-third);
+    border-right: 2px solid var(--border-third);
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* Заголовок аниме */
+h2 {
+    font-size: 14px;  /* Уменьшаем размер шрифта для заголовков */
+    margin: 10px 0;
+    font-weight: 600;
+    color: var(--main-text);
+}
+
+/* Описание аниме */
+p {
+    font-size: 12px;  /* Уменьшаем размер шрифта для описания */
+    color: var(--main-text);
+}
+
+
+.serii-button {
+    height: 40px;
+    width:  100px;
+    background-color: #29b6f6;
+    border:  none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+}
+
+.serii-button:hover{
+ opacity: 0.7;
+}
+
+
+.text-container {
+    width: 100%;                  /* Ограничиваем ширину контейнера */
+    max-width: 800px;            /* Максимальная ширина для контейнера */
+    margin: 20px auto;           /* Центрируем контейнер по горизонтали */
+    padding: 20px;               /* Отступы внутри контейнера */
+    border: none;
+    border-radius: 10px;         /* Скругленные углы */
+    background-color: #29b5f62d;   /* Цвет фона */
+    font-size: 30px;           
+    line-height: 1.6;           
+}
+.nav1{
+   
+    font: bold 14px / 20px Helvetica, Helvetica-Neue, Arial, sans-serif !important;
+    border: none !important;
+    cursor: pointer;
+    display: inline-block;
+    background: #FFCC02;
+    padding: 11px 10px !important;
+    color: #FFF !important;
+    margin: 0 4px 4px 0;
+    text-align: center;
+    text-decoration: none !important;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+.serii-container {
+    display: flex;               /* Используем flexbox */
+    flex-wrap: wrap;             /* Позволяем элементам переноситься на новую строку */
+    gap: 15px;                   /* Отступы между кнопками */
+    margin-top: 20px;
+}
+
+.serii-container > .serii-button:nth-child(n+9) {
+    margin-top: 10px;
+}
