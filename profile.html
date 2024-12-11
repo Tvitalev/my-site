@@ -20,8 +20,32 @@
         </ul>
     </nav>
     
-    
-    <p>профиля нет</p>
+    <div class="registration-container">
+        <h1>Регистрация</h1>
+        <form class="registration-form">
+          
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Введите email" required>
+            </div>
+            <div class="form-group">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+            </div>
+            <div class="form-group">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password"></label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Введите пароль повторно" required>
+            </div>
+           
+            <button type="submit" class="submit-button">Зарегистрироваться</button>
+        </form>
+        <p class="login-link">Уже есть аккаунт? <a href="profile1.js">Войти</a></p>
+    </div>
+
 
 </body>
 </html>
